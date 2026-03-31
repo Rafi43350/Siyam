@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Kingdom SR Plush Point</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --secondary: #4e46b4;
+            --accent: #ff6584;
+            --success: #42b883;
+            --warning: #ffc107;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333333;
+            --bg: #ffffff;
+            --card-bg: #f9f9f9;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        .dark-mode {
+            --primary: #7d76ff;
+            --secondary: #5f57d6;
+            --light: #2d3748;
+            --dark: #f8f9fa;
+            --text: #e2e8f0;
+            --bg: #1a202c;
+            --card-bg: #2d3748;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--bg);
+            box-shadow: 0 2px 10px var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .nav-item:hover {
+            color: var(--primary);
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border-radius: 50px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle i {
+            font-size: 1.2rem;
+            padding: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            padding: 150px 0 100px;
+            background: linear-gradient(rgba(108, 99, 255, 0.8), rgba(78, 70, 180, 0.8)), url('https://images.unsplash.com/photo-1522881193457-37ae97c905bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .welcome-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .typing-text {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+
+        .welcome p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Events Section */
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .event-img {
+            height: 200px;
+            background: linear-gradient(var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-date {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Why Join Section */
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .accordion-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            background: rgba(108, 99, 255, 0.1);
+        }
+
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 300px;
+        }
+
+        /* Support Section */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .support-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+
+        .support-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .support-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Additional Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        .animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate-top {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate-bottom {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100vh;
+            background: var(--card-bg);
+            z-index: 1001;
+            padding: 80px 30px 30px;
+            transition: var(--transition);
+            box-shadow: 5px 0 15px var(--shadow);
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu .nav-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .welcome {
+                padding: 120px 0 80px;
+            }
+
+            .typing-text {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .typing-text {
+                font-size: 1.8rem;
+                min-height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-crown"></i>
+                    SR Plush Point
+                </a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><i class="fas fa-user-graduate"></i> Student Login</li>
+                    <li class="nav-item"><i class="fas fa-user-shield"></i> Subadmin Login</li>
+                    <li class="nav-item"><i class="fas fa-user-cog"></i> Admin Login</li>
+                </ul>
+                
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li class="nav-item"><i class="fas fa-user-graduate"></i> Student Login</li>
+            <li class="nav-item"><i class="fas fa-user-shield"></i> Subadmin Login</li>
+            <li class="nav-item"><i class="fas fa-user-cog"></i> Admin Login</li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <div class="welcome-content">
+                <h1 class="typing-text" id="typing-text"></h1>
+                <p>We provide a comprehensive platform for learning and earning opportunities. Expand your knowledge, develop new skills, and grow your income with our diverse range of courses and services.</p>
+                <div class="btn-container">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Shop</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Visit Our Official Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title animate-top">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of services to help you learn, grow, and achieve your goals</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-left">
+                    <div class="service-icon">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h3>Quran and Islamic History</h3>
+                    <p>Learn the holy Quran and explore the rich history of Islam with our expert teachers.</p>
+                </div>
+                
+                <div class="service-card animate-right">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3>Pen Packaging</h3>
+                    <p>Master the art of pen packaging and create beautiful, professional-looking packages.</p>
+                </div>
+                
+                <div class="service-card animate-left">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Hand Painting</h3>
+                    <p>Discover your artistic side with our hand painting courses for all skill levels.</p>
+                </div>
+                
+                <div class="service-card animate-right">
+                    <div class="service-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>All Time Offers</h3>
+                    <p>Take advantage of our special offers and discounts available throughout the year.</p>
+                </div>
+                
+                <div class="service-card animate-left">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Trilinear</h3>
+                    <p>Learn about trilinear concepts and applications in various fields of study.</p>
+                </div>
+                
+                <div class="service-card animate-right">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Designer</h3>
+                    <p>Become a professional designer with our comprehensive design courses.</p>
+                </div>
+                
+                <div class="service-card animate-left">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Photo Editing</h3>
+                    <p>Transform your photos with our professional photo editing courses.</p>
+                </div>
+                
+                <div class="service-card animate-right">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Lead Generation</h3>
+                    <p>Learn effective strategies for generating quality leads for your business.</p>
+                </div>
+                
+                <div class="service-card animate-left">
+                    <div class="service-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook Boosting</h3>
+                    <p>Maximize your social media presence with our Facebook boosting techniques.</p>
+                </div>
+                
+                <div class="service-card animate-right">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Learn to build modern, responsive websites from scratch.</p>
+                </div>
+                
+                <div class="service-card animate-left">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Create mobile applications for iOS and Android platforms.</p>
+                </div>
+                
+                <div class="service-card animate-right">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Master the art of digital marketing and grow your online presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events">
+        <div class="container">
+            <div class="section-title animate-top">
+                <h2>Upcoming Events</h2>
+                <p>Join our exciting events and expand your knowledge and network</p>
+            </div>
+            <div class="events-container">
+                <div class="event-card animate-left">
+                    <div class="event-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date"><i class="far fa-calendar-alt"></i> June 15, 2023</div>
+                        <h3>Annual Learning Festival</h3>
+                        <p>Join us for a day of workshops, seminars, and networking opportunities with industry experts.</p>
+                        <a href="#" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card animate-bottom">
+                    <div class="event-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date"><i class="far fa-calendar-alt"></i> June 22, 2023</div>
+                        <h3>Web Development Workshop</h3>
+                        <p>Learn the latest web development technologies and frameworks in this hands-on workshop.</p>
+                        <a href="#" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card animate-right">
+                    <div class="event-img">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date"><i class="far fa-calendar-alt"></i> July 5, 2023</div>
+                        <h3>Digital Art Exhibition</h3>
+                        <p>Experience the amazing digital art created by our students and professional artists.</p>
+                        <a href="#" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card animate-left">
+                    <div class="event-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date"><i class="far fa-calendar-alt"></i> July 12, 2023</div>
+                        <h3>Digital Marketing Conference</h3>
+                        <p>Learn from industry leaders about the latest trends in digital marketing strategies.</p>
+                        <a href="#" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card animate-right">
+                    <div class="event-img">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date"><i class="far fa-calendar-alt"></i> July 20, 2023</div>
+                        <h3>Career Guidance Seminar</h3>
+                        <p>Get expert advice on building your career path in the technology and creative industries.</p>
+                        <a href="#" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-join">
+        <div class="container">
+            <div class="section-title animate-top">
+                <h2>Why Join Our Platform</h2>
+                <p>Discover the benefits of becoming part of our learning community</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item animate-left">
+                    <div class="accordion-header">
+                        <span>Expert Instructors</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Learn from industry professionals with years of experience in their respective fields. Our instructors are dedicated to helping you succeed.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item animate-right">
+                    <div class="accordion-header">
+                        <span>Flexible Learning</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Access courses anytime, anywhere. Learn at your own pace with our flexible online learning platform.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item animate-left">
+                    <div class="accordion-header">
+                        <span>Practical Projects</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Gain hands-on experience with real-world projects that enhance your portfolio and skills.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item animate-right">
+                    <div class="accordion-header">
+                        <span>Community Support</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Join a vibrant community of learners and professionals. Network, collaborate, and grow together.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item animate-left">
+                    <div class="accordion-header">
+                        <span>Career Opportunities</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Get access to exclusive job opportunities and career guidance from our placement team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <div class="section-title animate-top">
+                <h2>Support You'll Receive</h2>
+                <p>We provide comprehensive support to ensure your success</p>
+            </div>
+            <div class="support-grid">
+                <div class="support-item animate-left">
+                    <div class="support-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock assistance for all your queries and concerns.</p>
+                </div>
+                
+                <div class="support-item animate-bottom">
+                    <div class="support-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Learning Resources</h3>
+                    <p>Access to extensive learning materials and reference documents.</p>
+                </div>
+                
+                <div class="support-item animate-top">
+                    <div class="support-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Mentorship</h3>
+                    <p>One-on-one guidance from experienced mentors in your field.</p>
+                </div>
+                
+                <div class="support-item animate-right">
+                    <div class="support-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Technical Assistance</h3>
+                    <p>Help with technical issues and platform navigation.</p>
+                </div>
+                
+                <div class="support-item animate-left">
+                    <div class="support-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career Guidance</h3>
+                    <p>Professional advice for career development and job placement.</p>
+                </div>
+                
+                <div class="support-item animate-bottom">
+                    <div class="support-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certification</h3>
+                    <p>Recognized certificates upon completion of courses.</p>
+                </div>
+                
+                <div class="support-item animate-right">
+                    <div class="support-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <p>Opportunities to connect with peers and industry professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title animate-top">
+                <h2>Platform Features</h2>
+                <p>Explore the features that make our platform unique</p>
+            </div>
+            <div class="features">
+                <div class="feature animate-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Platform</h3>
+                    <p>Your data and privacy are protected with advanced security measures.</p>
+                </div>
+                
+                <div class="feature animate-bottom">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Access</h3>
+                    <p>Learn on the go with our mobile-friendly platform and app.</p>
+                </div>
+                
+                <div class="feature animate-top">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Offline Access</h3>
+                    <p>Download courses and learn without an internet connection.</p>
+                </div>
+                
+                <div class="feature animate-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your learning progress with detailed analytics and reports.</p>
+                </div>
+                
+                <div class="feature animate-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Certification</h3>
+                    <p>Earn recognized certificates to boost your career prospects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SR Plush Point</h3>
+                    <p>Your ultimate destination for learning and earning opportunities. Expand your knowledge and skills with our comprehensive platform.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Learning Street, Education City</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@srplushpoint.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SR Plush Point. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing Effect
+        const typingText = document.getElementById('typing-text');
+        const text = "Welcome to your kingdom SR Plush Point";
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const overlay = document.getElementById('overlay');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Accordion Functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                content.classList.toggle('active');
+                if (content.classList.contains('active')) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
+        });
+
+        // Scroll Animations
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.animate-left, .animate-right, .animate-top, .animate-bottom');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            type();
+            checkVisibility();
+        });
+
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+</body>
+  </html>
